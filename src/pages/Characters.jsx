@@ -8,19 +8,23 @@ const Characters = () => {
   const { subject, setStudentName } = useStateContext();
 
   return (
-    <div className="flex m-2">
+    <div>
 
       {/* Danganronpa 1 */}
       {subject.d1 &&
       (<div>
 
         {/* text stuff */}
-        <div className="absolute right-5">
-          <div className="bg-gray-400 rounded-xl w-fit h-fit p-5">
+        <div className="m-auto md:w-2/3 w-3/4">
+
+          {/* title */}
+          <div className="bg-gray-400 rounded-xl h-fit p-5 my-5 text-right">
           <span className="text-xl font-extrabold">Danganronpa: Trigger Happy Havoc</span>
           <p className="font-bold">Characters</p>
           </div>
-          <div className="text-right mt-5 p-2 bg-gray-200 rounded-xl underline">
+
+          {/* list */}
+          <div className="p-2 bg-gray-200 rounded-md underline text-center">
             <ul>
               {students.map((item) => (
                 item.danganronpa1.map((d1) => (
@@ -41,12 +45,16 @@ const Characters = () => {
       (<div>
 
         {/* text stuff */}
-        <div className="absolute right-5">
-          <div className="bg-gray-400 rounded-xl w-fit h-fit p-5">
+        <div className="m-auto md:w-2/3 w-3/4">
+
+          {/* title */}
+          <div className="bg-gray-400 rounded-xl h-fit p-5 my-5 text-right">
           <span className="text-xl font-extrabold">Danganronpa 2: Goodbye Despair</span>
           <p className="font-bold">Characters</p>
           </div>
-          <div className="text-right mt-5 p-2 bg-gray-200 rounded-xl underline">
+
+          {/* list */}
+          <div className="p-2 bg-gray-200 rounded-md underline text-center">
             <ul>
               {students.map((item) => (
                 item.danganronpa2.map((d2) => (

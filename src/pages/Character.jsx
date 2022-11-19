@@ -9,7 +9,7 @@ const Character = () => {
 
   return (
     <div>
-      <div className="text-xl font-bold text-center mt-5">
+      <div className="text-2xl font-bold text-center mt-5">
         {studentName.name}
       </div>
       {studentName.summary()}

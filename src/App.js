@@ -52,6 +52,11 @@ const App = () => {
                 <Route path="/Danganronpa 2/Characters" element={<Characters/>}/>
                 <Route path="/Danganronpa 2/Trials" element={<Trials/>}/>
 
+                {/* DV3 */}
+                <Route path="/Danganronpa 3/Summary" element={<Summary/>}/>
+                <Route path="/Danganronpa 3/Characters" element={<Characters/>}/>
+                <Route path="/Danganronpa 3/Trials" element={<Trials/>}/>
+
                 {/* Characters */}
                 {students.map((game) => (
                   game.danganronpa1.map((d1) => (

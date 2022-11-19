@@ -1,4 +1,17 @@
 import { React } from 'react';
+import Makoto from './images/MakotoNaegiartwork.png';
+import Kyoko from './images/KyokoKririgiri.png';
+
+const spoilerSection = (text) => {
+  const change = () => {
+    document.getElementById("spoilText").className=undefined;
+  }
+  return(
+    <span id="spoilText" className="spoiler" onClick={change}>{text}</span>
+  )
+}
+
+const studentPhotoClass = "float-left m-5 max-w-full h-72";
 
 export const students = [
   {
@@ -6,11 +19,13 @@ export const students = [
       {
         name: 'Makoto Naegi',
         ult: 'Lucky',
-        // photo: picture
+        photo: {Makoto},
         summary: () => {return(
-          <div className="absolute center m-5 w-3/4 bg-gray-200">
+          <div className="m-auto md:w-2/3 w-3/4 bg-gray-200">
+            <img src={Makoto} alt="Makoto" className={studentPhotoClass}/>
             <div className="text-right p-2">
-              <p>Main Protag boi is the <span className="font-bold">Ultimate Lucky Student</span>.</p>
+              <p className="mb-2">Makoto Naegi is the <span className="font-bold">Ultimate Lucky Student</span> and the main protagonist you play as in the first Danganronpa game.</p>
+              <p>Makoto recieved his ultimate by winning the schools annual lottery that selects a random person to attend the elite school <span className="italic">Hopes Peak Academy</span>.</p>
             </div>
           </div>
         )},
@@ -19,11 +34,15 @@ export const students = [
       },
       {
         name: 'Kyoko Kirigiri',
-        ult: 'Dectective',
-        // photo: picture
+        ult: 'Detective',
+        photo: {Kyoko},
         summary: () => {return(
-          <div className="absolute right-5 m-5 p-2 bg-gray-200">
-            <p>Smart Mystery Lady.</p>
+          <div className="m-auto md:w-2/3 w-3/4 bg-gray-200">
+            <img src={Kyoko} alt="Kyoko" className={studentPhotoClass}/>
+            <div className="text-right p-2">
+              <p className="mb-2">Kyoko Kirigiri is the <span className="font-bold">Ultimate {spoilerSection("Detective")}</span>.</p>
+              <p>Makoto recieved his ultimate by winning the schools annual lottery that selects a random person to attend the elite school <span className="italic">Hopes Peak Academy</span>.</p>
+            </div>
           </div>
         )},
         blackened: false,

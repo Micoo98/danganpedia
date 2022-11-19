@@ -2,6 +2,7 @@ import React, { createContext, useContext, useState } from 'react';
 
 const StateContext = createContext();
 
+// add another initialState and the handleClick function from Dashboard to use for revealing spoiler info
 const initialState = {
     d1: false,
     d2: false,

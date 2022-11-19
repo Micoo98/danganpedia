@@ -2,15 +2,16 @@ import React from 'react';
 
 const Home = () => {
   return (
-    <div>
+    <div className="m-auto md:w-2/3 w-3/4">
+
+      {/* title */}
       <div>
-        <p className="text-5xl font-extrabold text-center">Welcome To Danganpedia!</p>
-        <p className="text-right text-sm font-semibold">V.001</p>
+        <p className="mt-5 text-5xl font-extrabold text-center">Welcome To Danganpedia!</p>
       </div>
-      <div className="items-center flex w-1/2 h-52 m-5 rounded-md bg-gray-200">
-        <div className="bg-gray-400 right-1/2 absolute rounded-lg px-2">
-          <span className="text-center">This is a thing I made.</span>
-        </div>
+
+      {/* body */}
+      <div className="h-52 mt-5 p-2 rounded-md bg-gray-200">
+      <span className="text-right">This is a thing I made.</span>
       </div>
     </div>
   )
