@@ -20,7 +20,7 @@ const Characters = () => {
           {/* title */}
           <div className="bg-gray-400 rounded-xl h-fit p-5 my-5 text-right">
           <span className="text-xl font-extrabold">Danganronpa: Trigger Happy Havoc</span>
-          <p className="font-bold">Characters</p>
+          <p className="text-lg font-semibold">Characters</p>
           </div>
 
           {/* list */}
@@ -50,7 +50,7 @@ const Characters = () => {
           {/* title */}
           <div className="bg-gray-400 rounded-xl h-fit p-5 my-5 text-right">
           <span className="text-xl font-extrabold">Danganronpa 2: Goodbye Despair</span>
-          <p className="font-bold">Characters</p>
+          <p className="text-lg font-semibold">Characters</p>
           </div>
 
           {/* list */}

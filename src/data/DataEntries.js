@@ -2,13 +2,12 @@ import { React } from 'react';
 import Makoto from './images/MakotoNaegiartwork.png';
 import Kyoko from './images/KyokoKririgiri.png';
 
-const spoilerSection = (text) => {
-  const change = () => {
-    document.getElementById("spoilText").className=undefined;
+const change = () => {
+  const spoilers = document.getElementsByClassName("spoiler");
+  for(let i = 0; i < spoilers.length; i++)
+  {
+    spoilers[i].className = undefined;
   }
-  return(
-    <span id="spoilText" className="spoiler" onClick={change}>{text}</span>
-  )
 }
 
 const studentPhotoClass = "float-left m-5 max-w-full h-72";
@@ -23,6 +22,7 @@ export const students = [
         summary: () => {return(
           <div className="m-auto md:w-2/3 w-3/4 bg-gray-200">
             <img src={Makoto} alt="Makoto" className={studentPhotoClass}/>
+            {/* Student Description */}
             <div className="text-right p-2">
               <p className="mb-2">Makoto Naegi is the <span className="font-bold">Ultimate Lucky Student</span> and the main protagonist you play as in the first Danganronpa game.</p>
               <p>Makoto recieved his ultimate by winning the schools annual lottery that selects a random person to attend the elite school <span className="italic">Hopes Peak Academy</span>.</p>
@@ -40,8 +40,10 @@ export const students = [
           <div className="m-auto md:w-2/3 w-3/4 bg-gray-200">
             <img src={Kyoko} alt="Kyoko" className={studentPhotoClass}/>
             <div className="text-right p-2">
-              <p className="mb-2">Kyoko Kirigiri is the <span className="font-bold">Ultimate {spoilerSection("Detective")}</span>.</p>
-              <p>Makoto recieved his ultimate by winning the schools annual lottery that selects a random person to attend the elite school <span className="italic">Hopes Peak Academy</span>.</p>
+              {/* Student Description */}
+              <p className="mb-2">Kyoko Kirigiri is the <span className="font-bold">Ultimate <span className="spoiler" id="spoilText" onClick={change}>Detective</span></span>.</p>
+              <p>Very little is known about Kyoko at the very begining of the game. She keeps her distance and is untrusting of the other students she's trapped with and refuses to talk about what her ultimate is.</p>
+              <p>Later in the game you discover that Kyoko is <span className="spoiler" id="spoilText" onClick={change}>the daughter of the Principal of <span className="italic">Hopes Peak</span></span>.</p>
             </div>
           </div>
         )},
@@ -169,6 +171,8 @@ export const students = [
         murdered: true,
       },
     ],
+
+    //////////////////////////////
     danganronpa2: [
       {
         name: 'Akane Owari',
@@ -300,4 +304,36 @@ export const students = [
       },
     ],
   },
+];
+
+export const trials = [
+  {
+    danganronpa1: [
+      {
+        name: "Trial 1",
+        victim: "Sayaka Maizono",
+        blackened: "Leon Kuwata",
+      },
+      {
+        name: "Trial 2",
+        victim: "Chihiro Fujisaki",
+        blackened: "Mondo Owada",
+      },
+      {
+        name: "Trial 3",
+        victim: "Kiyotaka Ishimaru",
+        blackened: "Hifumi Yamada",
+      },
+      {
+        name: "Trial 3 (again)",
+        victim: "Hifumi Yamada",
+        blackened: "Celestia Ludenberg",
+      },
+      {
+        name: "Trial 4",
+        victim: "Sakura Ogami",
+        blackened: "Sakura Ogami",
+      },
+    ]
+  }
 ];
