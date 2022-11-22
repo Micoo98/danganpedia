@@ -310,29 +310,85 @@ export const trials = [
   {
     danganronpa1: [
       {
+        id: "t1",
         name: "Trial 1",
         victim: "Sayaka Maizono",
         blackened: "Leon Kuwata",
       },
       {
+        id: "t2",
         name: "Trial 2",
         victim: "Chihiro Fujisaki",
         blackened: "Mondo Owada",
       },
       {
+        id: "t3",
         name: "Trial 3",
         victim: "Kiyotaka Ishimaru",
         blackened: "Hifumi Yamada",
       },
       {
+        id: "t3",
         name: "Trial 3 (again)",
         victim: "Hifumi Yamada",
         blackened: "Celestia Ludenberg",
       },
       {
+        id: "t4",
         name: "Trial 4",
         victim: "Sakura Ogami",
         blackened: "Sakura Ogami",
+      },
+      {
+        id: "t5",
+        name: "Trial 5",
+        victim: "N/A",
+        blackened: "Makoto Naegi",
+      },
+      {
+        id: "t6",
+        name: "Trial 6",
+        victim: "Mukuro Ikusaba",
+        blackened: "Junko Enoshima",
+      }
+    ],
+
+    danganronpa2: [
+      {
+        id: "t1",
+        name: "Trial 1",
+        victim: "Byakuya Togami?",
+        blackened: "Teruteru Hanamura",
+      },
+      {
+        id: "t2",
+        name: "Trial 2",
+        victim: "Mahiru Koizumi",
+        blackened: "Peko Pekoyama",
+      },
+      {
+        id: "t3",
+        name: "Trial 3",
+        victim: "Ibuki Mioda, Hiyoko Saionji",
+        blackened: "Mikan Tsumiki",
+      },
+      {
+        id: "t4",
+        name: "Trial 4",
+        victim: "Nekomaru Nidai",
+        blackened: "Gundham Tanaka",
+      },
+      {
+        id: "t5",
+        name: "Trial 5",
+        victim: "Nagito Komaeda",
+        blackened: "Chiaki Nanami",
+      },
+      {
+        id: "t6",
+        name: "Trial 6",
+        victim: "N/A",
+        blackened: "N/A",
       },
     ]
   }

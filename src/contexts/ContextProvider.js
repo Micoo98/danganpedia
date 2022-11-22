@@ -9,15 +9,29 @@ const initialState = {
     d3: false,
 }
 
+const activeTrial = {
+    t1: false,
+    t2: false,
+    t3: false,
+    t4: false,
+    t5: false,
+    t6: false,
+}
+
 export const ContextProvider = ({children}) => {
     const [activeMenu, setActiveMenu] = useState(true);
     const [screenSize, setScreenSize] = useState(undefined);
     const [subject, setSubject] = useState(initialState);
-    const [studentName, setStudentName] = useState(undefined)
+    const [studentName, setStudentName] = useState(undefined);
+    const [trial, setTrial] = useState(activeTrial);
 
     const subjectClick = (clicked) => {
         setSubject({...initialState, [clicked]: true})
     };
+
+    const trialClick = (clicked) => {
+        setTrial({...activeTrial, [clicked]: true})
+    }
 
     return(
         <StateContext.Provider
@@ -30,7 +44,10 @@ export const ContextProvider = ({children}) => {
             setSubject,
             subjectClick,
             studentName,
-            setStudentName
+            setStudentName,
+            trial,
+            setTrial,
+            trialClick,
             }}>
             {children}
         </StateContext.Provider>

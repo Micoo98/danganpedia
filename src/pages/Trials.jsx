@@ -4,7 +4,7 @@ import { trials } from '../data/DataEntries';
 import { useStateContext } from '../contexts/ContextProvider';
 
 const Trials = () => {
-  const { subject } = useStateContext();
+  const { subject, trialClick } = useStateContext();
   return (
     <div>
 
@@ -22,7 +22,7 @@ const Trials = () => {
 
           {/* table */}
           <div className="bg-gray-200 rounded-md h-fit p-5 my-5">
-            <table className="mx-auto border-spacing-5 text-center">
+            <table className="mx-auto border-spacing-5 text-center bg-white">
               <tr>
                 <th>Trial Number</th>
                 <th>Victim</th>
@@ -30,10 +30,44 @@ const Trials = () => {
               </tr>
               {trials.map((item) => (
                 item.danganronpa1.map((d1) => (
-                  <tr>
+                  <tr className="hover:bg-gray-400 hover:text-black" onClick={() => trialClick(d1.id)}>
                     <th>{d1.name}</th>
                     <td>{d1.victim}</td>
                     <td>{d1.blackened}</td>
+                  </tr>
+                ))
+              ))}
+            </table>
+          </div>
+        </div>
+      </div>)}
+
+      {subject.d2 &&
+      (<div>
+
+        {/* text stuff */}
+        <div className="m-auto md:w-2/3 w-3/4">
+
+          {/* title */}
+          <div className="bg-gray-400 rounded-xl h-fit p-5 my-5 text-right">
+            <span className="text-xl font-extrabold">Danganronpa 2: Goodbye Despair</span>
+            <p className="text-lg font-semibold">Trials</p>
+          </div>
+
+          {/* table */}
+          <div className="bg-gray-200 rounded-md h-fit p-5 my-5">
+            <table className="mx-auto border-spacing-5 text-center bg-white">
+              <tr>
+                <th>Trial Number</th>
+                <th>Victim</th>
+                <th>Blackened</th>
+              </tr>
+              {trials.map((item) => (
+                item.danganronpa2.map((d2) => (
+                  <tr className="hover:bg-gray-400 hover:text-black" onClick={() => trialClick(d2.id)}>
+                    <th>{d2.name}</th>
+                    <td>{d2.victim}</td>
+                    <td>{d2.blackened}</td>
                   </tr>
                 ))
               ))}
