@@ -8,6 +8,7 @@ import Summary from './pages/Summary';
 import Characters from './pages/Characters';
 import Character from './pages/Character';
 import Trials from './pages/Trials';
+import Trial from './pages/Trial';
 
 import {students} from './data/DataEntries';
 import { useStateContext } from './contexts/ContextProvider';
@@ -46,11 +47,23 @@ const App = () => {
                 <Route path="/Danganronpa 1/Summary" element={<Summary/>}/>
                 <Route path="/Danganronpa 1/Characters" element={<Characters/>}/>
                 <Route path="/Danganronpa 1/Trials" element={<Trials/>}/>
+                <Route path="/Danganronpa 1/t1" element={<Trial/>}/>
+                <Route path="/Danganronpa 1/t2" element={<Trial/>}/>
+                <Route path="/Danganronpa 1/t3" element={<Trial/>}/>
+                <Route path="/Danganronpa 1/t4" element={<Trial/>}/>
+                <Route path="/Danganronpa 1/t5" element={<Trial/>}/>
+                <Route path="/Danganronpa 1/t6" element={<Trial/>}/>
 
                 {/* Goodbye Despair */}
                 <Route path="/Danganronpa 2/Summary" element={<Summary/>}/>
                 <Route path="/Danganronpa 2/Characters" element={<Characters/>}/>
                 <Route path="/Danganronpa 2/Trials" element={<Trials/>}/>
+                <Route path="/Danganronpa 2/t1" element={<Trial/>}/>
+                <Route path="/Danganronpa 2/t2" element={<Trial/>}/>
+                <Route path="/Danganronpa 2/t3" element={<Trial/>}/>
+                <Route path="/Danganronpa 2/t4" element={<Trial/>}/>
+                <Route path="/Danganronpa 2/t5" element={<Trial/>}/>
+                <Route path="/Danganronpa 2/t6" element={<Trial/>}/>
 
                 {/* DV3 */}
                 <Route path="/Danganronpa 3/Summary" element={<Summary/>}/>

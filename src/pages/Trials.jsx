@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 import { trials } from '../data/DataEntries';
 import { useStateContext } from '../contexts/ContextProvider';
@@ -31,7 +32,14 @@ const Trials = () => {
               {trials.map((item) => (
                 item.danganronpa1.map((d1) => (
                   <tr className="hover:bg-gray-400 hover:text-black" onClick={() => trialClick(d1.id)}>
-                    <th>{d1.name}</th>
+                    <th className="underline">
+                      <NavLink
+                      to={`/Danganronpa 1/${d1.id}`}
+                      key={d1.id}
+                      onClick={() => trialClick(d1.id)}>
+                        {d1.name}
+                      </NavLink>
+                    </th>
                     <td>{d1.victim}</td>
                     <td>{d1.blackened}</td>
                   </tr>
@@ -65,7 +73,14 @@ const Trials = () => {
               {trials.map((item) => (
                 item.danganronpa2.map((d2) => (
                   <tr className="hover:bg-gray-400 hover:text-black" onClick={() => trialClick(d2.id)}>
-                    <th>{d2.name}</th>
+                    <th className="underline">
+                      <NavLink
+                      to={`/Danganronpa 1/${d2.id}`}
+                      key={d2.id}
+                      onClick={() => trialClick(d2.id)}>
+                        {d2.name}
+                      </NavLink>
+                    </th>
                     <td>{d2.victim}</td>
                     <td>{d2.blackened}</td>
                   </tr>
