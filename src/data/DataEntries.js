@@ -1,16 +1,14 @@
 import { React } from 'react';
 import Makoto from './images/MakotoNaegiartwork.png';
 import Kyoko from './images/KyokoKririgiri.png';
+import Byakuya from './images/ByakuyaTogami.png';
+import Toko from './images/TokoFukawa.jpg';
+import Aoi from './images/Aoi.jpg';
 
-const change = () => {
-  const spoilers = document.getElementsByClassName("spoiler");
-  for(let i = 0; i < spoilers.length; i++)
-  {
-    spoilers[i].className = undefined;
-  }
-}
+import {change} from '../functions/ReuseableFunctions';
 
 const studentPhotoClass = "float-left m-5 max-w-full h-72";
+const quoteClass = "italic";
 
 export const students = [
   {
@@ -25,6 +23,7 @@ export const students = [
             {/* Student Description */}
             <div className="text-right p-2">
               <p className="mb-2">Makoto Naegi is the <span className="font-bold">Ultimate Lucky Student</span> and the main protagonist you play as in the first Danganronpa game.</p>
+              
               <p>Makoto recieved his ultimate by winning the schools annual lottery that selects a random person to attend the elite school <span className="italic">Hopes Peak Academy</span>.</p>
             </div>
           </div>
@@ -42,8 +41,10 @@ export const students = [
             <div className="text-right p-2">
               {/* Student Description */}
               <p className="mb-2">Kyoko Kirigiri is the <span className="font-bold">Ultimate <span className="spoiler" id="spoilText" onClick={change}>Detective</span></span>.</p>
-              <p>Very little is known about Kyoko at the very begining of the game. She keeps her distance and is untrusting of the other students she's trapped with and refuses to talk about what her ultimate is.</p>
-              <p>Later in the game you discover that Kyoko is <span className="spoiler" id="spoilText" onClick={change}>the daughter of the Principal of <span className="italic">Hopes Peak</span></span>.</p>
+
+              <p className="mb-2">Very little is known about Kyoko at the very begining of the game. She keeps her distance and is untrusting of the other students she's trapped with and refuses to talk about what her ultimate is.</p>
+
+              <p className="mb-2">Later in the game you discover that Kyoko is <span className="spoiler" id="spoilText" onClick={change}>the daughter of the Principal of <span className="italic">Hopes Peak</span></span>.</p>
             </div>
           </div>
         )},
@@ -52,11 +53,17 @@ export const students = [
       },
       {
         name: 'Byakuya Togami',
-        ult: 'Affluent Prodigy',
-        // photo: picture
+        ult: 'Affluent Progeny',
+        photo: {Byakuya},
         summary: () => {return(
-          <div className="absolute right-5 m-5 p-2 bg-gray-200">
-            <p>Rich conspiracy person</p>
+          <div className="m-auto md:w-2/3 w-3/4 bg-gray-200">
+            <img src={Byakuya} alt="Byakua" className={studentPhotoClass}/>
+            {/* Student Description */}
+            <div className="text-right p-2">
+              <p className="mb-2">Byakuya Togami is the <span className="font-bold">Ultimate Affluent Progeny</span> and is next in line to inherit his families fortune but he already has had multiple successful buisnesses take off before the events of Danganronpa.</p>
+
+              <p className="mb-2">Thanks to his fathers connections he has gained a lot of info that most people aren't privilaged to have. Because of this he has developed an interest in secret information about famous crimes.</p>
+            </div>
           </div>
         )},
         blackened: false,
@@ -65,10 +72,18 @@ export const students = [
       {
         name: 'Toko Fukawa',
         ult: 'Author',
-        // photo: picture
+        photo: {Toko},
         summary: () => {return(
-          <div className="absolute right-5 m-5 p-2 bg-gray-200">
-            <p>Book lady likes to murder.</p>
+          <div className="m-auto md:w-2/3 w-3/4 bg-gray-200">
+            <img src={Toko} alt="Toko" className={studentPhotoClass}/>
+            {/* Student Description */}
+            <div className="text-right p-2">
+              <p className="mb-2">Toko Fukawa is the <span className="font-bold">Ultimate Author </span> and is depected as an overly shy character.</p>
+
+              <p className="mb-2">Some of her favorite things to do seems to be not showering and being hostile.</p>
+
+              <p>It is later revealed that <span className="spoiler" id="spoilText" onClick={change}>she is also the infamous serial killer known as Genocide Jack or as she perfers 'Genocide Jill'. This came to light during the second trial when byakuya found out about Toko's secret and decided to make the murder scene look like her past work just to mess with the others.</span></p>
+            </div>
           </div>
         )},
         blackened: false,
@@ -77,8 +92,20 @@ export const students = [
       {
         name: 'Aoi Asahina',
         ult: 'Swimmer',
-        // photo: picture
-        summary: 'Swimming lady makes jokes',
+        photo: {Aoi},
+        summary: () => {return(
+          <div className="m-auto md:w-2/3 w-3/4 bg-gray-200">
+            <img src={Aoi} alt="Toko" className={studentPhotoClass}/>
+            {/* Student Description */}
+            <div className="text-right p-2">
+              <p className="mb-2">Aoi Asahina is the <span className="font-bold">Ultimate Swimmer</span>.</p>
+              
+              <p>She likes to speak in innuendos.</p>
+            </div>
+            {/* quote */}
+            <p className={quoteClass}>"Everyone just calm down! Listen, why don't we all go around and introduce ourselves? Heya! I'm Aoi Asahina!"</p>
+          </div>
+        )},
         blackened: false,
         murdered: false,
       },

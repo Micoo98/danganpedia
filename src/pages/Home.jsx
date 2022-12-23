@@ -10,8 +10,10 @@ const Home = () => {
       </div>
 
       {/* body */}
-      <div className="h-52 mt-5 p-2 rounded-md bg-gray-200">
-      <span className="text-right">This is a thing I made.</span>
+      <div className="h-52 mt-5 p-2 rounded-md bg-gray-200 text-right">
+      <p className="mb-2">This Website was made to test myself in using React. I do plan on filling out all the pages though as time goes on.</p>
+
+      <p>I've tried to censor some information but there are still spoilers for the Danganronpa Series, this is the only warning.</p>
       </div>
     </div>
   )
